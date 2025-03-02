@@ -1,0 +1,90 @@
+PDB Analyzer
+Herramienta para el análisis de estructuras de proteínas
+PDB Analyzer es un paquete de Python diseñado para procesar archivos PDB (Protein Data Bank) y generar análisis detallados sobre ángulos de torsión (phi y psi), clasificaciones de residuos, gráficos Ramachandran y reportes en formato PDF.
+
+Características
+Cálculo de ángulos phi y psi: Calcula los ángulos de torsión entre residuos de proteínas utilizando sus coordenadas tridimensionales.
+Clasificación de residuos: Clasifica residuos en categorías como polares, no polares, aromáticos, entre otros.
+Gráficos Ramachandran: Genera gráficos Ramachandran para residuos específicos como glicina y prolina, así como un gráfico general.
+Gráficos de clasificación: Crea histogramas y gráficos de barras para visualizar la frecuencia y clasificación de residuos.
+Generación de reportes en PDF: Combina los gráficos generados en un archivo PDF detallado.
+Instalación
+Asegúrate de tener instaladas las siguientes bibliotecas:
+
+numpy
+pandas
+seaborn
+matplotlib
+fpdf
+
+Instala estas dependencias ejecutando:
+pip install numpy pandas seaborn matplotlib fpdf
+
+Uso del paquete
+1. Procesar un archivo PDB
+El paquete incluye una función para leer archivos PDB y extraer las coordenadas de los átomos:
+--- df = process_pdb("archivo.pdb") -----
+Esta función devuelve un DataFrame con las columnas: ["atom", "residue", "chain", "residue num", "x", "y", "z"].
+
+2. Calcular ángulos phi, psi y omega:
+Utiliza las coordenadas atómicas para calcular los ángulos de torsión:
+--- angles_df = calculate_phi_psi_omega(df)-----
+
+3. Generar gráficos Ramachandran
+Crea gráficos para los residuos generales, glicina y prolina:
+--- generate_ramachandran_plots(angles_df, "nombre_proteina")---
+
+4. Visualizar la frecuencia y clasificación de residuos
+Genera histogramas y gráficos de barras para analizar las propiedades químicas:
+--- generate_histogram_and_barplot(angles_df, "nombre_proteina") ---
+
+5. Crear un reporte PDF
+Combina todos los gráficos en un archivo PDF para facilitar la visualización:
+--- create_pdf("nombre_proteina", plot_name, glycine_plot_name, proline_plot_name, hist_plot_name, classification_name)---
+
+Funciones principales
+process_pdb(pdb_file)
+Lee un archivo PDB y devuelve un DataFrame con las coordenadas atómicas.
+
+torsion_angle(a, b, c, d)
+Calcula el ángulo de torsión entre cuatro puntos tridimensionales.
+
+classify_residue(residue)
+Clasifica un residuo según su polaridad y propiedades químicas.
+
+calculate_angles(df)
+Calcula los ángulos phi y psi para cada residuo de una cadena y los clasifica.
+
+generate_ramachandran_plots(angles_df, prot_pdb)
+Genera gráficos Ramachandran para glicina, prolina y todos los residuos.
+
+generate_histogram_and_barplot(angles_df, prot_pdb)
+Crea histogramas y gráficos de barras sobre la frecuencia y clasificación de residuos.
+
+create_pdf(prot_pdb, plot_name, glycine_plot_name, proline_plot_name, hist_plot_name, classification_name)
+Genera un reporte PDF con los gráficos generados.
+
+Ejemplo de uso
+from pdb_analyzer import process_pdb, calculate_angles, generate_ramachandran_plots, generate_histogram_and_barplot, create_pdf
+
+# Leer archivo PDB
+df = process_pdb("1ewq.pdb")
+
+# Calcular ángulos
+angles_df = calculate_angles(df)
+
+# Generar gráficos
+plot_name, glycine_plot_name, proline_plot_name = generate_ramachandran_plots(angles_df, "1EWQ")
+hist_plot_name, classification_name = generate_histogram_and_barplot(angles_df, "1EWQ")
+
+# Crear PDF
+create_pdf("1EWQ", plot_name, glycine_plot_name, proline_plot_name, hist_plot_name, classification_name)
+
+Este paquete fue desarrollado para analizar estructuras de proteínas de manera eficiente y generar reportes completos para estudios bioinformáticos.
+
+
+
+ 
+
+
+

@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6310a575-1beb-40b6-acf4-d7ae1d27fbae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PARCIAL3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/main/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_Calculations/Torsion_angles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_Calculations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_Calculations/pdb_parser.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_classification/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_classification/plot_utils.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_classification/residue_types.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_report/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_report/pdf_report.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1EWQ.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1ewq.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_Calculations/1ewq.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FUNCIONES.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Paquete_pdb_analyzer/pdb_analyzer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/radamachandran.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +40,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2swZcMR2nVJmphLYahxzZcJ4bPF" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -40,8 +51,10 @@
   &quot;keyToString&quot;: {
     &quot;Python.FUNCIONES.executor&quot;: &quot;Run&quot;,
     &quot;Python.funciones.executor&quot;: &quot;Run&quot;,
+    &quot;Python.omega.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pdb_analyzer.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -50,7 +63,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.FUNCIONES">
+  <component name="RunManager" selected="Python.omega">
     <configuration name="FUNCIONES" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="PARCIAL3" />
       <option name="ENV_FILES" value="" />
@@ -97,8 +110,56 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="omega" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PARCIAL3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/omega.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pdb_analyzer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PARCIAL3" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pdb_analyzer.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.omega" />
+        <item itemvalue="Python.pdb_analyzer" />
         <item itemvalue="Python.FUNCIONES" />
         <item itemvalue="Python.funciones" />
       </list>
@@ -123,13 +184,32 @@
       <workItem from="1739368677249" duration="2003000" />
       <workItem from="1739458673760" duration="19000" />
       <workItem from="1739458845342" duration="531000" />
+      <workItem from="1739631809046" duration="764000" />
+      <workItem from="1739891360747" duration="5000" />
+      <workItem from="1740068123590" duration="82000" />
+      <workItem from="1740495671623" duration="42000" />
+      <workItem from="1740931299843" duration="527000" />
+      <workItem from="1740931843901" duration="2763000" />
+      <workItem from="1740935394426" duration="8100000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PARCIAL3$FUNCIONES.coverage" NAME="FUNCIONES Coverage Results" MODIFIED="1739370119298" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/PARCIAL3$pdb_analyzer.coverage" NAME="pdb_analyzer Coverage Results" MODIFIED="1740932647506" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
